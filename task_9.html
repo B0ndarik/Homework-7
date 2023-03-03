@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Створити функцію, яка виводить банер (у функцію передаються: зображення,
+      заголовок та посилання, куди переходимо при кліку на зображення (тег img
+      повине знаходитись у середині тега a:
+    </p>
+  </body>
+  <script>
+    const imageUrl = "../img/apple.png";
+    const header = "The best apples";
+    const linkAdress = "index.html";
+
+    function drawBanner(a, b, c) {
+      document.write(`<h1>${b}</h1><a href=${c}><img src=${a}></a>`);
+    }
+
+    drawBanner(imageUrl, header, linkAdress);
+  </script>
+</html>

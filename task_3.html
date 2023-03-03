@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день
+      робочим.
+    </p>
+    <script>
+      const dayNumber = parseInt(prompt("Enter the number of day"));
+
+      function getWorkDay(a) {
+        switch (a) {
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+          case 5:
+            return "Work Day";
+          case 6:
+          case 7:
+            return "Day Off";
+          default:
+            return "Error";
+        }
+      }
+
+      document.write(getWorkDay(dayNumber));
+    </script>
+  </body>
+</html>

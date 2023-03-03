@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Створити окремі функції, які для 4 чисел знаходять: 1)суму; 2)добуток;
+      3)середнє арифметичне; 4)мінімальне значення.
+    </p>
+    <script>
+      const number1 = parseFloat(prompt("Enter number 1"));
+      const number2 = parseFloat(prompt("Enter number 2"));
+      const number3 = parseFloat(prompt("Enter number 3"));
+      const number4 = parseFloat(prompt("Enter number 4"));
+
+      function getSum(a, b, c, d) {
+        return a + b + c + d;
+      }
+
+      function getProduct(a, b, c, d) {
+        return a * b * c * d;
+      }
+
+      function getAverage(a, b, c, d) {
+        return getSum(a, b, c, d) / arguments.length;
+      }
+
+      function getMin(a, b, c, d) {
+        let minNumber = Infinity;
+        if (a < minNumber) minNumber = a;
+        if (b < minNumber) minNumber = b;
+        if (c < minNumber) minNumber = c;
+        if (d < minNumber) minNumber = d;
+        return minNumber;
+      }
+
+      document.write(`${getSum(number1, number2, number3, number4)}<br>`);
+      document.write(`${getProduct(number1, number2, number3, number4)}<br>`);
+      document.write(`${getAverage(number1, number2, number3, number4)}<br>`);
+      document.write(`${getMin(number1, number2, number3, number4)}`);
+    </script>
+  </body>
+</html>

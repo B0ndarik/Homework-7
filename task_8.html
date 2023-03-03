@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="index.html">На головну</a></h1>
+    <p>
+      Створити функцію, яка випадковим чином виводить на екран одне із 4
+      зображень (шляхи до зображень передаються у функцію)
+    </p>
+    <script>
+      const imageUrl1 = "../img/apple.png";
+      const imageUrl2 = "../img/banana.png";
+      const imageUrl3 = "../img/grapes.png";
+      const imageUrl4 = "../img/lemon.png";
+
+      function drawImage(a, b, c, d) {
+        const randomImage = 1 + Math.floor(Math.random() * 4);
+        switch (randomImage) {
+          case 1:
+            return a;
+          case 2:
+            return b;
+          case 3:
+            return c;
+          case 4:
+            return d;
+        }
+      }
+
+      document.write(
+        `<img src=${drawImage(imageUrl1, imageUrl2, imageUrl3, imageUrl4)}`
+      );
+    </script>
+  </body>
+</html>
